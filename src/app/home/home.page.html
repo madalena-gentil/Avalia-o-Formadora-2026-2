@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Meu Cartão de Identificação
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <div style="text-align: center; padding-top: 20px;">
+      <img 
+        src="assets/icon/foto.png" 
+        style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto;" 
+      />
+    </div>
+
+    <ion-card-content>
+      <p><strong>Nome:</strong> Madalena França Gentil Veiga</p>
+      <p><strong>Código da turma:</strong> ADS0301M</p>
+      <p><strong>Unidade:</strong> Bonsucesso</p>
+      <p><strong>Turno:</strong> Manhã</p>
+
+      <ion-item lines="none" class="ion-no-padding" style="margin-top: 15px;">
+        <ion-input
+          label="Palavra-chave:"
+          label-placement="stacked"
+          fill="outline"
+          style="font-weight: bold; --border-color: #ddd;">
+        </ion-input>
+      </ion-item>
+
+      <ion-button expand="block" color="success" routerLink="/tela2" class="ion-margin-top">
+        Ver Tela 2
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

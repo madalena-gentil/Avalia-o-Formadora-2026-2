@@ -1,0 +1,7 @@
+{
+  "name": "minhaApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
