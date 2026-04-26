@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Color Change</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [style.--background]="corFundo">
+  <div class="container" style="padding: 20px;">
+    
+    <ion-list lines="none">
+      <ion-item>
+        <ion-range min="0" max="255" color="danger" [(ngModel)]="r">
+          <ion-label slot="start">R</ion-label>
+        </ion-range>
+      </ion-item>
+
+      <ion-item>
+        <ion-range min="0" max="255" color="success" [(ngModel)]="g">
+          <ion-label slot="start">G</ion-label>
+        </ion-range>
+      </ion-item>
+
+      <ion-item>
+        <ion-range min="0" max="255" color="tertiary" [(ngModel)]="b">
+          <ion-label slot="start">B</ion-label>
+        </ion-range>
+      </ion-item>
+    </ion-list>
+
+    <div style="margin-top: 20px;">
+      <ion-button [style.--background]="corBotao" (click)="mudarCorBotao()" expand="block">
+        Botão 1 (Mudar minha cor)
+      </ion-button>
+
+      <ion-button (click)="mudarCorFundo()" expand="block" style="margin-top: 10px;">
+        Botão 2 (Mudar fundo da tela)
+      </ion-button>
+
+      <ion-button color="success" expand="block" style="margin-top: 10px;">
+        <ion-back-button defaultHref="home" text="Voltar" icon="none"></ion-back-button>
+      </ion-button>
+    </div>
+
+  </div>
+</ion-content>
