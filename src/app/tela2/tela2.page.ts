@@ -8,8 +8,9 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: './tela2.page.html',
   styleUrls: ['./tela2.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [FormsModule, IonicModule, CommonModule] 
 })
+
 export class Tela2Page {
   r: number = 0;
   g: number = 0;
@@ -18,7 +19,7 @@ export class Tela2Page {
   corFundo: string = '#ffffff';
 
   mudarCorBotao() {
-    this.corBotao = `rgb(${this.r}, ${this.g}, ${this.b})`;
+    this.corBotao = `#BC125C`;
   }
 
   mudarCorFundo() {
