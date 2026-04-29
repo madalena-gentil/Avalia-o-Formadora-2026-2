@@ -18,16 +18,18 @@
           <p><strong>Turno:</strong> Manhã</p>
         </div>
 
-     <ion-list lines="none">
-  <ion-item fill="outline" mode="md" class="campo-senha" style="margin-bottom: 30px !important;">
-    <ion-label position="stacked">Palavra-chave:</ion-label>
-    <ion-input type="text" placeholder="Digite sua palavra"></ion-input>
+   <div style="padding: 5px; margin-top: 5px;">
+  
+  <ion-item fill="outline" mode="md" style="--min-height: 45px;">
+    <ion-label position="stacked" style="font-size: 0.9em;">Palavra-chave:</ion-label>
+    <ion-input type="text" placeholder="Digite aqui..."></ion-input>
   </ion-item>
 
-  <ion-button (click)="irParaTela2()" style="width: 100%; height: 50px; --background: blue; color: white;">
+  <ion-button (click)="irParaTela2()" expand="block" style="--background: blue; color: white; height: 40px; margin-top: 10px;">
     TELA 2
   </ion-button>
-</ion-list>
+
+</div>
 
     </ion-card-content>
 
