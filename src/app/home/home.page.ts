@@ -1,14 +1,26 @@
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { RouterModule } from '@angular/router'; // 1. ESSA LINHA É NOVA
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule, RouterModule],
+  imports: [
+    IonicModule, 
+    CommonModule, 
+    FormsModule, 
+    RouterModule 
+  ],
 })
 export class HomePage {
-  constructor() {}
+  constructor(private router: Router) {}
+
+  irParaTela2() {
+    console.log("Navegando para a tela 2...");
+    this.router.navigate(['/tela2']);
+  }
 }

@@ -1,0 +1,74 @@
+.container-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f0f0f0; 
+}
+
+.card-estilizado {
+  width: 90%;
+  max-width: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: background-color 0.4s ease;
+  padding-bottom: 20px;
+}
+
+.topo-azul {
+  background: #2a3eb1;
+  color: white;
+  padding: 18px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.caixa-branca-sliders {
+  background: white;
+  margin: 20px;
+  border-radius: 8px;
+  padding: 5px;
+
+  .item-rgb {
+    --border-color: #e0e0e0; 
+    --inner-padding-end: 15px;
+    font-weight: bold;
+    
+    .label-rgb {
+      margin-right: 15px;
+      color: #333;
+    }
+  }
+}
+
+.botoes-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  gap: 15px;           
+  margin: 20px 0;
+  width: 100%;
+}
+
+.botao-pilula {
+  width: 180px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.area-voltar {
+  padding: 0 20px;
+  
+  .btn-verde {
+    --border-radius: 8px;
+    height: 50px;
+    font-weight: bold;
+  }
+}

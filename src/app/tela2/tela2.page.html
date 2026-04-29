@@ -1,52 +1,44 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Color Change</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [style.--background]="corFundo">
-  <div class="container" style="padding: 20px;">
+<ion-content>
+  <div class="container-principal">
     
-    <ion-list lines="none">
-      <ion-item>
-        <ion-range min="0" max="255" color="danger" [(ngModel)]="r">
-          <ion-label slot="start">R</ion-label>
-        </ion-range>
-      </ion-item>
+    <div class="card-estilizado" [style.background-color]="corFundoCard">
+      <div class="topo-azul">Color Change</div>
 
-      <ion-item>
-        <ion-range min="0" max="255" color="success" [(ngModel)]="g">
-          <ion-label slot="start">G</ion-label>
-        </ion-range>
-      </ion-item>
+      <div class="caixa-branca-sliders">
+        <ion-item lines="full" class="item-rgb">
+          <span class="label-rgb">R</span>
+          <ion-range color="danger" min="0" max="255" [(ngModel)]="r"></ion-range>
+        </ion-item>
+        <ion-item lines="full" class="item-rgb">
+          <span class="label-rgb">G</span>
+          <ion-range color="success" min="0" max="255" [(ngModel)]="g"></ion-range>
+        </ion-item>
+        <ion-item lines="full" class="item-rgb">
+          <span class="label-rgb">B</span>
+          <ion-range color="primary" min="0" max="255" [(ngModel)]="b"></ion-range>
+        </ion-item>
+      </div>
 
-      <ion-item>
-        <ion-range min="0" max="255" color="tertiary" [(ngModel)]="b">
-          <ion-label slot="start">B</ion-label>
-        </ion-range>
-      </ion-item>
-    </ion-list>
+    <div class="botoes-container">
+  <button class="botao-pilula"
+         [style.background-color]="corDoBotao1" 
+          (click)="cliqueBotao1()">
+          1
+        </button>
 
-   <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 30px;">
-  
-  <ion-button 
-    [style.--background]="corBotao" 
-    (click)="mudarCorBotao()" 
-    style="width: 150px; height: 50px; --border-radius: 25px; margin-bottom: 15px;">
-    1
-  </ion-button>
+        <button class="botao-pilula"
+            [style.background-color]="AZUL_AVATAR" 
+            (click)="cliqueBotao2()">
+          2
+        </button>
+      </div>
 
-  <ion-button 
-    [style.--background]=" '#3880ff'" 
-    (click)="mudarCorFundo()" 
-    style="width: 150px; height: 50px; --border-radius: 25px; margin-bottom: 20px;">
-    2
-  </ion-button>
-
-  <ion-button color="success" expand="block" style="width: 90%;">
-    <ion-back-button defaultHref="home" text="Voltar"></ion-back-button>
-  </ion-button>
-
-</div>
+      <div class="area-voltar">
+        <ion-button expand="block" color="success" class="btn-verde" routerLink="/home">
+          <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+          VOLTAR
+        </ion-button>
+      </div>
+    </div>
   </div>
 </ion-content>
