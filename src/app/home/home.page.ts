@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core'; 
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -17,10 +17,11 @@ import { Router, RouterModule } from '@angular/router';
   ],
 })
 export class HomePage {
-  constructor(private router: Router) {}
+  
+  constructor() {}
 
-  irParaTela2() {
-    console.log("Navegando para a tela 2...");
-    this.router.navigate(['/tela2']);
+ irParaTela2() {
+    console.log("Forçando navegação...");
+    window.location.href = '/tela2';
   }
 }
